@@ -5,6 +5,7 @@ function addemp(){
     a.designation=document.getElementById("designation").value;
     a.salary=document.getElementById("salary").value;
     a.experience=document.getElementById("experience").value;
-    localStorage.setItem(a.empid,JSON.stringify(a));
     
+    localStorage.setItem(a.empid,JSON.stringify(a));
+    window.location.href="../index.html";
 }
