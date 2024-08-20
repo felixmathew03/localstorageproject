@@ -5,12 +5,13 @@ function addemp(){
     a.designation=document.getElementById("designation").value;
     a.salary=document.getElementById("salary").value;
     a.experience=document.getElementById("experience").value;
-    e=localStorage.getItem(a.empid);
-    if(e==""){
-        localStorage.setItem(a.empid,JSON.stringify(a));
-        window.location.href="../index.html";
+    
+    
+    if(localStorage.getItem(a.empid)){
+        alert("Same EMPID exists...Plaese enter once again!!");
     }
     else{
-        alert("Same EMPID exists...Plaese enter once again!!")
+        localStorage.setItem(a.empid,JSON.stringify(a));
+        window.location.href="../index.html";
     }
 }

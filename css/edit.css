@@ -10,22 +10,32 @@
     justify-content: center;
 }
 .content{
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    padding: 6% 3%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 3% 3% 6%;
     border-radius: 15px;
+    background: linear-gradient(90deg, rgb(5, 136, 110) 0%, rgba(0,255,218,1) 100%);
+    font-size: 20px;
 }
 .content table{
     width: 25vw;
     height: 30vh;
 }
+.content table td{
+    padding: 1%;
+}
 .content input[type="text"]{
     width: 100%;
-    height: 30px;
+    height: 32px;
+    border: 1px solid rgb(4, 84, 72) ;
+    border-radius: 5px;
 }
 .content button{
+    margin: 5% 0 0;
     padding: 2% 5%;
     background-color: rgb(221, 49, 36);
     border: none;
     color: white;
     border-radius: 10px;
+    width: 100%;
+    height: 40px;
 }

@@ -4,47 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Employee</title>
+    <link rel="stylesheet" href="../css/edit.css">
 </head>
 <body>
-    <div class="container shadow p-3 mb-5 bg-body rounded mt-3">
-        <form class="">
-            <div class="row mb-3 justify-content-center">
-              <label for="empid" class="col-sm-2 col-form-label">EMPID</label>
-              <div class="col-sm-8 justify-content-center">
-                <input type="text" class="form-control" id="empid">
-              </div>
-            </div>
-            <div class="row mb-3 justify-content-center">
-              <label for="name" class="col-sm-2 col-form-label">Name</label>
-              <div class="col-sm-8 ">
-                <input type="text" class="form-control" id="name">
-              </div>
-            </div>
-            <div class="row mb-3 justify-content-center">
-                <label for="designation" class="col-sm-2 col-form-label">Designation</label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control" id="designation">
-                </div>
-            </div>
-            <div class="row mb-3 justify-content-center">
-                <label for="salary" class="col-sm-2 col-form-label">Salary</label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control" id="salary">
-                </div>
-            </div>
-            <div class="row mb-3 justify-content-center">
-                <label for="experience" class="col-sm-2 col-form-label">Experience</label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control" id="experience">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 d-flex justify-content-center">
-                    <button class="btn btn-outline-success btn-lg" type="button" onclick="addemp()">Button</button>
-                </div>
-            </div>
-        </form>
-    </div>
+  <div class="container">
+    <div class="content" id="body" >
+      <table>
+        <h2 align="center" style="padding-bottom: 3%;">Add details</h2>
+        <tr>
+          <td><label for="name" >EmpID</label></td>
+          <td><input type="text"  id="empid" ></td>
+        </tr>
+        <tr>
+            <td><label for="name" >Name</label></td>
+            <td><input type="text"  id="name" ></td>
+        </tr>
+        <tr>
+            <td><label for="designation" >Designation</label></td>
+            <td><input type="text" id="designation" ></td>
+        </tr>
+        <tr>
+            <td><label for="salary" >Salary</label></td>
+            <td><input type="text"  id="salary" > </td>
+        </tr>
+        <tr>
+            <td><label for="experience">Experience</label></td>
+            <td><input type="text" id="experience" > </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><button  onclick="addemp()">Add Details</button></td>
+        </tr>
+    </table>
+    </div> 
+  </div>
+                
+                
     
     <script src="../js/addemp.js"></script>
 </body>

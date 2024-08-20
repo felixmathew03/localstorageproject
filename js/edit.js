@@ -4,6 +4,7 @@ function edit(){
     id=urlParams.get("id");
     value=JSON.parse(localStorage.getItem(id));
     document.getElementById("body").innerHTML=`<table>
+                <h2 align="center" style="padding-bottom: 3%;">Edit details</h2>
                 <tr>
                     <td><label for="name" >Name</label></td>
                     <td><input type="text"  id="name" value="${value.name}"></td>
@@ -21,7 +22,7 @@ function edit(){
                     <td><input type="text" id="experience" value="${value.experience}"> </td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="right"><button  onclick="editData()">Edit</button></td>
+                    <td colspan="2" align="center"><button  onclick="editData()">Edit Details</button></td>
                 </tr>
             </table>`;  
 }
@@ -30,33 +31,13 @@ function editData(){
     a={};
     a.empid=value.empid;
     var x1 = document.getElementById("name").value;
-    if (x1 == "") {
-        a.name=value.name;
-    }
-    else{
-        a.name=x1;
-    }
+    a.name=x1;
     var x2 = document.getElementById("designation").value;
-    if (x2 == "") {
-        a.designation=value.designation;
-    }
-    else{
-        a.designation=x2;
-    }
+    a.designation=x2;
     var x3 = document.getElementById("salary").value;
-    if (x3 == "") {
-        a.salary=value.salary;
-    }
-    else{
-        a.salary=x3;
-    }
-    var x4 = document.getElementById("experience").value;
-    if (x4 == "") {
-        a.experience=value.experience;
-    }
-    else{
-        a.experience=x4;  
-    }
+    a.salary=x3;    
+    var x4 = document.getElementById("experience").value;  
+    a.experience=x4;  
     localStorage.setItem(value.empid, JSON.stringify(a));
     window.location.href="../index.html";
 }
