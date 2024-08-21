@@ -22,7 +22,7 @@ function edit(){
                     <td><input type="text" id="experience" value="${value.experience}"> </td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center"><button  onclick="editData()">Edit Details</button></td>
+                    <td colspan="2" align="center"><button  onclick="editData()">Confirm</button></td>
                 </tr>
             </table>`;  
 }
@@ -30,14 +30,10 @@ edit();
 function editData(){
     a={};
     a.empid=value.empid;
-    var x1 = document.getElementById("name").value;
-    a.name=x1;
-    var x2 = document.getElementById("designation").value;
-    a.designation=x2;
-    var x3 = document.getElementById("salary").value;
-    a.salary=x3;    
-    var x4 = document.getElementById("experience").value;  
-    a.experience=x4;  
+    a.name= document.getElementById("name").value;
+    a.designation=document.getElementById("designation").value;
+    a.salary= document.getElementById("salary").value;    
+    a.experience= document.getElementById("experience").value;  
     localStorage.setItem(value.empid, JSON.stringify(a));
     window.location.href="../index.html";
 }

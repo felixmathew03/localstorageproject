@@ -7,22 +7,21 @@ function fetchData(){
         for(i=0;i<localStorage.length;i++){
             const key=localStorage.key(i);
             const value=JSON.parse(localStorage.getItem(key));
-            console.log(value.experience);
-            
             str+=`<tr>
                 <th scope="row">${value.empid}</th>
                 <td>${value.name}</td>
                 <td>${value.designation}</td>
                 <td>${value.salary}</td>
                 <td>${value.experience}</td>
-                <td><a href="./html/edit.html?id=${value.empid}"><button class="btn btn-outline-success me-4">Edit</button></a>
-                <button class="btn btn-outline-danger me-4" onclick="deleteemp('${value.empid}')">Delete</button></td>
+                <td><a href="./html/edit.html?id=${value.empid}"><button class="btn btn-outline-success me-4" ><img src="./img/edit_16dp_000000_FILL0_wght400_GRAD0_opsz20.png" alt=""></button></a>
+                <button class="btn btn-outline-danger me-4" onclick="deleteemp('${value.empid}')" > <img src="./img/delete_16dp_000000_FILL0_wght400_GRAD0_opsz20.png" alt=""></button></td>
               </tr>`
         }
         document.getElementById("tbody").innerHTML=str;
     }
 }
 fetchData();
+
 function deleteemp(e){
     console.log(e);
     
@@ -40,6 +39,7 @@ document.getElementById("filter").addEventListener('keyup',(e)=>{
         for(i=0;i<localStorage.length;i++){
             const key=localStorage.key(i);
             const value=JSON.parse(localStorage.getItem(key));
+            
             if(value.name.toLowerCase().includes(e.target.value.toLowerCase())){
                 str+=`<tr>
                 <th scope="row">${value.empid}</th>
@@ -49,14 +49,10 @@ document.getElementById("filter").addEventListener('keyup',(e)=>{
                 <td>${value.experience}</td>
                 <td><a href="./html/edit.html?id=${value.empid}"><button class="btn btn-outline-success me-4">Edit</button></a>
                 <button class="btn btn-outline-danger me-4" onclick="deleteemp('${value.empid}')">Delete</button></td>
-              </tr>`
-            }
-            else{
-                str=`<tr>
-                <td colspan="6"><h3>No such employee</h3></td>
-              </tr>`
+              </tr>`  
             }
             
+            document.getElementById("tbody").innerHTML=str;
         }
-        document.getElementById("tbody").innerHTML=str;
+        
 })
